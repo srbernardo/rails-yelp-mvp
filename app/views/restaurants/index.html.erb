@@ -2,13 +2,15 @@
 
 <h1>Restaurants</h1>
 
-<div id="restaurants">
+<div class="container" id="restaurants">
   <% @restaurants.each do |restaurant| %>
     <%= render restaurant %>
-    <p>
-      <%= link_to "Show this restaurant", restaurant %>
+    <p class="btn btn-outline-primary">
+      <%=  link_to "Show this restaurant", restaurant %>
     </p>
   <% end %>
 </div>
 
-<%= link_to "New restaurant", new_restaurant_path %>
+<p class="btn btn-outline-primary">
+  <%= link_to "New restaurant", new_restaurant_path %>
+</p>
