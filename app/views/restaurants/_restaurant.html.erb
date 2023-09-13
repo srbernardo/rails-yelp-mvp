@@ -1,22 +1,33 @@
 <div class="card"  id="<%= dom_id restaurant %>">
-  <p>
-    <strong>Name:</strong>
-    <%= restaurant.name %>
-  </p>
+  <div class="card-body">
+    <div class="d-flex align-items-baseline">
+      <h5 class="card-title me-2">Name:</h5>
+      <p class="card-text">
+        <%= restaurant.name %>
+      </p>
+    </div>
 
-  <p>
-    <strong>Address:</strong>
-    <%= restaurant.address %>
-  </p>
+    <div class="d-flex align-items-baseline">
+      <h5 class="card-title me-2">Address:</h5>
+      <p class="card-text">
+        <%= restaurant.address %>
+      </p>
+    </div>
 
-  <p>
-    <strong>Phone number:</strong>
-    <%= restaurant.phone_number %>
-  </p>
+    <div class="d-flex align-items-baseline">
+      <h5 class="card-title me-2">Phone number:</h5>
+      <p class="card-text">
+        <%= restaurant.phone_number %>
+      </p>
+    </div>
 
-  <p>
-    <strong>Category:</strong>
-    <%= restaurant.category %>
-  </p>
+    <div class="d-flex align-items-baseline">
+      <h5 class="card-title me-2">Category:</h5>
+      <p class="card-text">
+        <%= restaurant.category %>
+      </p>
+    </div>
 
+    <%=  link_to "Show this restaurant", restaurant, class: "btn btn-primary" %>
+  </div>
 </div>

@@ -1,16 +1,15 @@
-<p style="color: green"><%= notice %></p>
+<div class="container p-3">
+  <p style="color: green"><%= notice %></p>
 
-<h1>Restaurants</h1>
+  <h1>Restaurants</h1>
 
-<div class="container" id="restaurants">
-  <% @restaurants.each do |restaurant| %>
-    <%= render restaurant %>
-    <p class="btn btn-outline-primary">
-      <%=  link_to "Show this restaurant", restaurant %>
-    </p>
-  <% end %>
+  <%= link_to "New restaurant", new_restaurant_path, class: "btn btn-primary" %>
+
+  <div class="card my-3" id="restaurants">
+    <% @restaurants.each do |restaurant| %>
+      <div class="card-body">
+        <%= render restaurant %>
+      </div>
+    <% end %>
+  </div>
 </div>
-
-<p class="btn btn-outline-primary">
-  <%= link_to "New restaurant", new_restaurant_path %>
-</p>
