@@ -1,11 +1,14 @@
 <div class="card"  id="<%= dom_id restaurant %>">
   <div class="card-body">
-    <div class="d-flex align-items-baseline">
-      <h5 class="card-title me-2">Name:</h5>
-      <p class="card-text">
-        <%= restaurant.name %>
-      </p>
-    </div>
+
+    <% if current_page?("/") %>
+      <div class="d-flex align-items-baseline">
+        <h5 class="card-title me-2">Name:</h5>
+        <p class="card-text">
+          <%= restaurant.name %>
+        </p>
+      </div>
+    <% end %>
 
     <div class="d-flex align-items-baseline">
       <h5 class="card-title me-2">Address:</h5>
@@ -28,6 +31,8 @@
       </p>
     </div>
 
-    <%=  link_to "Show this restaurant", restaurant, class: "btn btn-primary" %>
+    <% if current_page?("/") %>
+      <%=  link_to "Show this restaurant", restaurant, class: "btn btn-primary" %>
+    <% end %>
   </div>
 </div>
