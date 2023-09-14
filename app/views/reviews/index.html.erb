@@ -1,14 +1,24 @@
-<div <% @reviews.each do |review|%>>
+<div class="container mt-5">
+  <h1>All reviews</h1>
+  <%= link_to "Back to restaurants", root_path, class: "btn btn-secondary mb-3"%>
   <div class="card">
-  <h1> <%= review.restaurant.name %> </h1>
-    <p>
-      <strong>Rating:</strong>
-      <%= review.rating %>/5
-    </p>
-
-    <p>
-      <strong>Content:</strong>
-      <%= review.content %>
-    </p>
+    <% @reviews.each do |review|%>
+      <div class="card-body">
+        <div class="card">
+          <div class="p-2">
+            <h5 class="card-title"><%= review.restaurant.name %></h5>
+            <p class="card-text">
+              <strong>Rating:</strong>
+              <%= review.rating %>/5
+            </p>
+            <p class="card-text">
+              <strong>Content:</strong>
+              <%= review.content %>
+            </p>
+            <%= link_to "Go to #{review.restaurant.name}", review.restaurant, class: "btn btn-primary" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
   </div>
-</div <% end %>>
+</div>
