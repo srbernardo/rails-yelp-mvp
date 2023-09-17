@@ -13,7 +13,7 @@
     </div>
     <div class="d-flex">
       <%= link_to "Edit", edit_restaurant_path(@restaurant), class: "btn btn-warning me-2" %>
-      <%= button_to "Destroy", @restaurant, class: "btn btn-danger", data:{ turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
+      <%= link_to "Destroy", restaurant_path(@restaurant), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "btn btn-danger" %>
     </div>
   </div>
 </div>
