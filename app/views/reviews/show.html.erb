@@ -1,24 +1,29 @@
 <div class="container p-3 mt-2">
-  <h1><%= @reviews[0].restaurant.name %> - Reviews</h1>
-  <%= link_to "Back to #{@reviews[0].restaurant.name}", restaurant_path(@reviews[0].restaurant), class: "btn btn-primary btn-sm mb-3" %>
-  <% @reviews.each do |review| %>
-    <div class="card mb-2">
-      <div class="card-body">
-        <div class="d-flex align-items-baseline">
-          <h5 class="card-title me-2">Rating:</h5>
-          <p class="card-text">
-            <%= review.rating %>/5
-          </p>
-        </div>
+  <% if @reviews.empty? %>
+    <h1> Não exite reviews</h1>
+    <%= link_to "Back to restaurants", root_path, class: "btn btn-secondary btn-sm mb-3" %>
+  <% else %>
+    <h1><%= @reviews[0].restaurant.name %> - Reviews</h1>
+    <%= link_to "Back to #{@reviews[0].restaurant.name}", restaurant_path(@reviews[0].restaurant), class: "btn btn-primary btn-sm mb-3" %>
+    <% @reviews.each do |review| %>
+      <div class="card mb-2">
+        <div class="card-body">
+          <div class="d-flex align-items-baseline">
+            <h5 class="card-title me-2">Rating:</h5>
+            <p class="card-text">
+              <%= review.rating %>/5
+            </p>
+          </div>
 
-        <div class="d-flex align-items-baseline">
-          <h5 class="card-title me-2">Review:</h5>
-          <p class="card-text">
-            <%= review.content %>
-          </p>
-        </div>
+          <div class="d-flex align-items-baseline">
+            <h5 class="card-title me-2">Review:</h5>
+            <p class="card-text">
+              <%= review.content %>
+            </p>
+          </div>
 
+        </div>
       </div>
-    </div>
+    <% end %>
   <% end %>
 </div>
