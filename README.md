@@ -1,24 +1,18 @@
-# README
+# Rails Yelp
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Descrição:
+Rails Yelp é um projeto inspirado na ideia do Yelp, onde os usuários podem realizar operações CRUD em restaurantes e adicionar avaliações aos mesmos. Este projeto foi desenvolvido usando Ruby on Rails e segue o paradigma de programação orientada a objetos, juntamente com relacionamentos entre a tabela de restaurantes e a tabela de avaliações.
 
-Things you may want to cover:
+## Funcionalidades Principais:
 
-* Ruby version
+- Cadastro, leitura, atualização e exclusão de restaurantes.
+- Adição de review aos restaurantes.
+- Visualização de reviews dos restaurantes.
+- Interface de usuário amigável com o uso de Bootstrap.
 
-* System dependencies
+## Tecnologias Utilizadas:
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- **Ruby on Rails**
+- **HTML**
+- **Bootstrap**
+- **SQLite3**
