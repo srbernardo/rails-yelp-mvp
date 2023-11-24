@@ -23,4 +23,6 @@ test:
 production:
   <<: *default
   url: <%= ENV["DATABASE_URL"] %>
-  database: db/production.sqlite3
+  database: demo_festalab_production
+  username: demo_festalab
+  password: <%= ENV["DEMO_FESTALAB_DATABASE_PASSWORD"] %>
